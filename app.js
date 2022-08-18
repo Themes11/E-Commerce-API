@@ -35,7 +35,7 @@ app.use(xss());
 
 app.use("/api/v1/auth", userrouter)
 app.use("/api/v1/product", productRouter)
-app.use("/api/v1/checkout", paymentRouter)
+app.use("/api/v1/checkout",authentication, paymentRouter)
 app.use("/api/v1/cart", authentication, cartRouter)
 
 
